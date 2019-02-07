@@ -5,18 +5,25 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FormAltaComponent } from './form-alta/form-alta.component';
+import { FormBajaComponent } from './form-baja/form-baja.component';
+import { ListaComponent } from './lista/lista.component';
+//TODO: Añadir o descomentar
+// import { PortfoliosService } from './portfolios.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormAltaComponent
+    FormAltaComponent,
+    FormBajaComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
-  ],
-  providers: [],
+  ],  
+  //TODO: Añadir o descomentar
+  // providers: [PortfoliosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
