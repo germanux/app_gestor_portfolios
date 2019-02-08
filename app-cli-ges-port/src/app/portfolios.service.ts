@@ -16,8 +16,16 @@ export class PortfoliosService {
     this.lista.push( nuevoPortfolio );
     console.log("<<< ALTA PORTFOLIO: " + nombre + " >>>");
   }
-  public baja(nombre : string) {
-    console.log("<<< BAJA PORTFOLIO: " + nombre + " >>>");    
+  public baja(nombre : string) {  
+    for(var i = 0; i < this.lista.length; i++) {
+      if (this.lista[i].getNombre().toLowerCase() == nombre.toLowerCase()) {
+        this.lista.splice(i, 1);
+        console.log("<<< BAJA PORTFOLIO: " + nombre + " >>>"); 
+        // Romper el bucle, para que no continue buscando 
+        return; // break;
+      }
+    }
+    console.log("<<< No ha encontrado " + nombre + " >>>"); 
   }
   public listar() : Array<Portfolio> {
     console.log("<<< LISTA PORTFOLIOs: " + this.lista.toString() + " >>>"); 

@@ -4,3 +4,9 @@
   [(ngModel)]="nombreIntroducido"/>
 <input type="button" (click)="darDeBaja()" value="Eliminar"/>
 </p>
+<select [(ngModel)] = "nombreIntroducido">
+  <option *ngFor="let p of arrayPortfolios" value="{{ p.getNombre() }}"
+    >
+    {{ p.getNombre() }} 
+  </option>
+</select>
