@@ -1,7 +1,7 @@
 <h2>Lista portfolios</h2>
 <ul> <!-- Unorderer List-->
-  <li *ngFor="let portfolio of arrayPortfolios">
-    El portfolio  {{ portfolio.nombre }}
+  <li *ngFor="let unPortfolio of arrayPortfolios">
+    El portfolio  {{ unPortfolio.getNombre() }}
   </li>
 </ul>
 <input type="button" (click)="actualizar()" value="actualizar()"/>

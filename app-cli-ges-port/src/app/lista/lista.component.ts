@@ -5,9 +5,7 @@ import { Portfolio } from 'app/portfolio';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.css'],  
-  //TODO: Quitar o comentar
-  providers: [PortfoliosService]
+  styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
   arrayPortfolios : Array<Portfolio>;
